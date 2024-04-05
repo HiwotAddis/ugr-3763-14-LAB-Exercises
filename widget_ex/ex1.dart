@@ -2,20 +2,43 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MaterialApp(
-    home: MyApp(),
+    home: Myapp(),
   ));
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class Myapp extends StatelessWidget {
+  const Myapp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Tracker'),
-          centerTitle: true,
-          backgroundColor: const Color.fromARGB(255, 7, 106, 255),
+          backgroundColor: Colors.blue,
+          leading: Icon(Icons.question_mark_rounded),
+          title: const Row(
+            children: [
+              Text(
+                'ij',
+                style: TextStyle(
+                    color: Colors.red,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30),
+              ),
+              Text(
+                'Tracker',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30),
+              ),
+              Spacer(),
+              Icon(Icons.notifications),
+              SizedBox(
+                width: 5,
+              ),
+              Icon(Icons.settings),
+            ],
+          ),
         ),
         body: Column(children: [
           Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
